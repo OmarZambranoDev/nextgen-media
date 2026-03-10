@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+NextGen Media - Game Discovery Platform
 
-## Getting Started
+A modern web application for discovering and reviewing video games, built with cutting-edge technologies to demonstrate best practices in React/Next.js development.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+TECH STACK
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Core Framework:
+- Next.js 16.1: React framework with App Router for server components, file-based routing, and API routes
+- React 19.2: UI library for building component-based interfaces
+- TypeScript 5.9: Type safety and better developer experience
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Styling & UI:
+- Tailwind CSS 3.4: Utility-first CSS framework for rapid UI development
+- Heroicons 2.2: Beautiful SVG icons from the Tailwind team
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Database & ORM:
+- Prisma 7.4: Type-safe ORM with automatic migrations
+- SQLite: Development database (easy to start)
+- better-sqlite3: SQLite driver for Prisma
 
-## Learn More
+State Management:
+- React Query 5.90: Server state management (caching, pagination, mutations)
+- Zustand 5.0: Client state management (UI state, modals, filters)
 
-To learn more about Next.js, take a look at the following resources:
+Authentication:
+- NextAuth.js 4.24: Authentication solution for Next.js with multiple providers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Development Tools:
+- Turbopack: Lightning-fast development bundler (Next.js default)
+- ESLint 9.39: Code linting and best practices
+- Prettier 3.4: Code formatting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Testing:
+- Vitest 3.1: Fast unit testing with Vite-powered transforms
+- React Testing Library 16.2: Component testing utilities
+- JSDOM 26.1: Browser environment simulation
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+INSTALLATION
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   git clone https://github.com/YOUR_USERNAME/nextgen-media.git
+   cd nextgen-media
+
+2. Install dependencies:
+   npm install
+
+3. Set up environment variables:
+   cp .env.example .env.local
+   (Edit .env.local with your values)
+
+4. Set up the database:
+   npx prisma generate
+   npx prisma db push
+
+5. Run the development server:
+   npm run dev
+
+
+TESTING
+
+- Run tests: npm test
+- Run tests with UI: npm run test:ui
+- Generate coverage report: npm run test:coverage
+
+
+AVAILABLE SCRIPTS
+
+- npm run dev: Start development server with Turbopack
+- npm run build: Build for production
+- npm run start: Start production server
+- npm run lint: Run ESLint
+- npm run format: Format code with Prettier
+- npm test: Run Vitest tests
+- npm run test:ui: Run tests with Vitest UI
+- npm run test:coverage: Run tests with coverage report
+- npm run prisma:studio: Open Prisma database GUI
+- npm run prisma:push: Push schema changes to database
+
+
+FEATURES IMPLEMENTED
+
+- Next.js 14 App Router with TypeScript
+- Tailwind CSS v3 with custom theme
+- Prisma ORM with SQLite
+- React Query for server state
+- Zustand for client state
+- Authentication boilerplate with NextAuth.js
+- Testing setup with Vitest
+- ESLint and Prettier configuration
+- Responsive navbar with mobile menu
+- Professional homepage UI
+
+
+COMING SOON
+
+- Game listing with infinite scroll
+- Dynamic game detail pages
+- Search and filter functionality
+- User reviews and ratings
+- Favorites system
+- Real-time trending
+- Animations with Framer Motion
+- E2E tests with Playwright
+- Deployment to Vercel
+
+
+LICENSE
+
+MIT
+
+
+Author: Omar Zambrano
+
+
+Built with Next.js, TypeScript, and Tailwind CSS
